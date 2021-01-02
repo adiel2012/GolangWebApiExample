@@ -54,16 +54,12 @@ func LogMiddleware(h http.HandlerFunc) http.HandlerFunc {
 
 func RequireAuthMiddleware(h http.HandlerFunc) http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-
 		h.ServeHTTP(w, r) // call ServeHTTP on the original handler
-
 	})
 }
 
 func SomeOtherMiddleware(h http.HandlerFunc) http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-
 		h.ServeHTTP(w, r) // call ServeHTTP on the original handler
-
 	})
 }
